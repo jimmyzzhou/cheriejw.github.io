@@ -1,2 +1,3 @@
 # cheriejw.github.io
-Website.
+Currently playing with Data Science.
+  Kaggle Data Sets and Highcharts.
