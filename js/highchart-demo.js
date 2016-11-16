@@ -1,4 +1,5 @@
-$(function doublebarchart() {
+function doublebarchart() {
+$(function () {
     Highcharts.chart('container', {
         chart: {
             type: 'column'
@@ -74,7 +75,9 @@ $(function doublebarchart() {
         }]
     });
 });
+}
 
+bubblechart() {
 $(function bubblechart() {
     Highcharts.chart('container', {
 
@@ -189,3 +192,4 @@ $(function bubblechart() {
         }]
     });
 });
+}
