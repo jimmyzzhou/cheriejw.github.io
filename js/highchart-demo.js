@@ -74,7 +74,6 @@ $(function () {
         }]
     });
     
-    $(function () {
     Highcharts.chart('bubble', {
 
         chart: {
@@ -188,5 +187,4 @@ $(function () {
         }]
 
     });
-});
 })
