@@ -77,8 +77,8 @@ $(function () {
 });
 }
 
-bubblechart() {
-$(function bubblechart() {
+function bubblechart() {
+$(function() {
     Highcharts.chart('container', {
 
         chart: {
