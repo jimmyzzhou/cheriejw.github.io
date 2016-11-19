@@ -1,4 +1,3 @@
-function doublebarchart() {
 $(function () {
     Highcharts.chart('container', {
         chart: {
@@ -74,11 +73,7 @@ $(function () {
             yAxis: 1
         }]
     });
-});
-}
-
-function bubblechart() {
-$(function() {
+    
     Highcharts.chart('container', {
 
         chart: {
@@ -192,4 +187,3 @@ $(function() {
         }]
     });
 });
-}
