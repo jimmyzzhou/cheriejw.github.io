@@ -1,4 +1,5 @@
-$(function () {
+$(document).ready(function () {
+    //First highchart that are bars.
     Highcharts.chart('bars', {
         chart: {
             type: 'column'
@@ -74,6 +75,7 @@ $(function () {
         }]
     });
     
+    //Second highchart that is a bubble.
     Highcharts.chart('bubble', {
 
         chart: {
@@ -153,7 +155,8 @@ $(function () {
                 '<tr><th>Fat intake:</th><td>{point.x}g</td></tr>' +
                 '<tr><th>Sugar intake:</th><td>{point.y}g</td></tr>' +
                 '<tr><th>Obesity (adults):</th><td>{point.z}%</td></tr>',
-            footerFormat: '</table>',
+            footerFormat:
+            '</table>',
             followPointer: true
         },
 
