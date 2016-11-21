@@ -210,24 +210,31 @@ $(document).ready(function () {
 		},
 		series: []
 	};
-			
-	//Load the data from the CSV file. This is the contents of the file:
-	$.get('accident.csv', function(data) {
+	//Only displays Apples to Bananas.
+	
+	/*
+		Load the data from the CSV file. This is the contents of the file:
+		Apples,Pears,Oranges,Bananas,Plums
+		John,8,4,6,5
+		Jane,3,4,2,3
+		Joe,86,76,79,77
+		Janet,3,16,13,15
+	 */ 
+
+	$.get('data/accident_drunk_hc.csv', function(data) {
 		// Split the lines
 		var lines = data.split('\n');
 		$.each(lines, function(lineNo, line) {
 			var items = line.split(',');
-			
 			// header line containes categories
-			if (lineNo == 0) {
+			if (lineNo == 0) { //Apples,Pears,Oranges,Bananas,Plums
 				$.each(items, function(itemNo, item) {
 					if (itemNo > 0) options.xAxis.categories.push(item);
 				});
 			}
-			
 			// the rest of the lines contain data with their name in the first position
-			else {
-				var series = { 
+			else { //John,8,4,6,5
+				var series = { //load into series.
 	    			data: []
 				};
 				$.each(items, function(itemNo, item) {
