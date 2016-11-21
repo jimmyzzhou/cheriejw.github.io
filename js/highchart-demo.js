@@ -172,7 +172,7 @@ $(document).ready(function () {
 	// All data plotted on a chart comes from the series object.
         series: [{
             data: [
-                { x: 95, y: 95, z: 13.8, name: 'BE', country: 'Belgiume' },
+                { x: 95, y: 95, z: 13.8, name: 'BE', country: 'Belgium' },
                 { x: 86.5, y: 102.9, z: 14.7, name: 'DE', country: 'Germany' },
                 { x: 80.8, y: 91.5, z: 15.8, name: 'FI', country: 'Finland' },
                 { x: 80.4, y: 102.5, z: 12, name: 'NL', country: 'Netherlands' },
@@ -244,10 +244,9 @@ $(document).ready(function () {
 					} else {
 						series.data.push(parseFloat(item));
 					}
-				}); //where is it getting the third Series?
+				}); //Where is it getting the third Series?
 				options.series.push(series);
 			}
-					
 		});
 		var chart = new Highcharts.Chart(options);
 	});
