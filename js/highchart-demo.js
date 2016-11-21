@@ -169,9 +169,10 @@ $(document).ready(function () {
             }
         },
 
+	// All data plotted on a chart comes from the series object.
         series: [{
             data: [
-                { x: 95, y: 95, z: 13.8, name: 'BE', country: 'Belgium' },
+                { x: 95, y: 95, z: 13.8, name: 'BE', country: 'Belgiume' },
                 { x: 86.5, y: 102.9, z: 14.7, name: 'DE', country: 'Germany' },
                 { x: 80.8, y: 91.5, z: 15.8, name: 'FI', country: 'Finland' },
                 { x: 80.4, y: 102.5, z: 12, name: 'NL', country: 'Netherlands' },
@@ -194,22 +195,22 @@ $(document).ready(function () {
     //Another way to graph, adding things from CSV file, using JQuery
     var options = {
         chart: {
-            renderTo: 'loadcsv',
-			type: 'column'
-		},
+		renderTo: 'loadcsv',
+		type: 'column'
+	},
+	title: {
+		text: 'Accidents Sample in 2015'
+	},
+	xAxis: {
+		categories: []
+	},
+	yAxis: {
 		title: {
-			text: 'Loaded CSV File'
-		},
-		xAxis: {
-			categories: []
-		},
-		yAxis: {
-			title: {
-			    text: 'Units'
-			}
-		},
-		series: []
-	};
+		    text: '# of Accidents'
+		}
+	},
+	series: []
+    };
 	//Only displays Apples to Bananas.
 	
 	/*
@@ -227,30 +228,27 @@ $(document).ready(function () {
 		$.each(lines, function(lineNo, line) {
 			var items = line.split(',');
 			// header line containes categories
-			if (lineNo == 0) { //Apples,Pears,Oranges,Bananas,Plums
+			if (lineNo == 0) { //Apples,Pears,Oranges,Bananas,Plums : Weekdays for my data.
 				$.each(items, function(itemNo, item) {
 					if (itemNo > 0) options.xAxis.categories.push(item);
 				});
 			}
 			// the rest of the lines contain data with their name in the first position
-			else { //John,8,4,6,5
+			else { //John,8,4,6,5 : Accident,5237,3991,3950,4128,4406,4857,5597
 				var series = { //load into series.
 	    			data: []
 				};
 				$.each(items, function(itemNo, item) {
-					if (itemNo == 0) {
+					if (itemNo == 0) { //first data is the name.
 						series.name = item;
 					} else {
 						series.data.push(parseFloat(item));
 					}
-				});
-						
+				}); //where is it getting the third Series?
 				options.series.push(series);
-
 			}
 					
 		});
-				
 		var chart = new Highcharts.Chart(options);
 	});
 })
