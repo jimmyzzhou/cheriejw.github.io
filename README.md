@@ -1,4 +1,4 @@
 # cheriejw.github.io
-Currently playing with *Data Science*. 
+Currently playing with *Data*. 
 
   Kaggle Data Sets and Highcharts.
