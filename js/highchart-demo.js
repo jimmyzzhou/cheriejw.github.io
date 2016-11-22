@@ -239,7 +239,7 @@ $(document).ready(function () {
 	    			data: []
 				};
 				$.each(items, function(itemNo, item) {
-					if (itemNo == 0) { //first data is the name.
+					if (itemNo == 0 && !(item == null)) { //first data is the name.
 						series.name = item;
 					} else {
 						series.data.push(parseFloat(item));
