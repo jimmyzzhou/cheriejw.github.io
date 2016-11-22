@@ -191,8 +191,9 @@ $(document).ready(function () {
         }]
 
     });
-    
+	
     //Another way to graph, adding things from CSV file, using JQuery
+    //http://www.highcharts.com/docs/chart-concepts/responsive
     var options = {
         chart: {
 		renderTo: 'loadcsv',
