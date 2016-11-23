@@ -22,11 +22,21 @@
 </head>
 
 <body> 
-  <!--<div><button type="button" onclick="alert('Hello World!')">Click Me!</button></div>-->
-  <div id="bars" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div>
-  <div id="bubble" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div>
-  <div id="loadcsv" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div>
-  <div id="combo" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div>
-  <div id="spline" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div>
+  <div align="center">
+    <h1> Data Visualization </h1>
+    <h3> Click on the buttons to see that graph! </h3>
+    <!-- <button type="button" onclick="alert('Click on the buttons to see that graph!')">How to use!</button> -->
+    <button type="button" onclick="spline()">Spline!</button>
+    <button type="button" onclick="combo()">Combo!</button>
+    <button type="button" onclick="bars()">Bars!</button>
+    <button type="button" onclick="bubble()">Bubble!</button>
+    <button type="button" onclick="loadcsv()">Load from CSV!</button>
+  </div>
+  <div id="dynamic" align="center"></div>
+  <!-- <div id="bars" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div> -->
+  <!-- <div id="bubble" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div> -->
+  <!-- <div id="loadcsv" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div> -->
+  <!-- <div id="combo" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div> -->
+  <!-- <div id="spline" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div> -->
 </body>
 </html>

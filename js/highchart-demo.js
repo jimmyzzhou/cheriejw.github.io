@@ -1,6 +1,10 @@
-$(document).ready(function () {
+//All the Highchart charts.
+
+var container = 'dynamic';
+
+function bars() {$(document).ready(function () {
     //First highchart that are bars.
-    Highcharts.chart('bars', {
+    Highcharts.chart(container, {
         chart: {
             type: 'column'
         },
@@ -74,10 +78,11 @@ $(document).ready(function () {
             yAxis: 1
         }]
     });
-    
-    //Second highchart that is a bubble.
-    Highcharts.chart('bubble', {
+})}
 
+function bubble() {$(document).ready(function () {
+    //Second highchart that is a bubble.
+    Highcharts.chart(container, {
         chart: {
             type: 'bubble',
             plotBorderWidth: 1,
@@ -169,7 +174,7 @@ $(document).ready(function () {
             }
         },
 
-	// All data plotted on a chart comes from the series object.
+    // All data plotted on a chart comes from the series object.
         series: [{
             data: [
                 { x: 95, y: 95, z: 13.8, name: 'BE', country: 'Belgium' },
@@ -189,71 +194,74 @@ $(document).ready(function () {
                 { x: 64, y: 82.9, z: 31.3, name: 'NZ', country: 'New Zealand' }
             ]
         }]
-
     });
-	
+})}
+
+function loadcsv() {$(document).ready(function () {
     //Another way to graph, adding things from CSV file, using JQuery
     //http://www.highcharts.com/docs/chart-concepts/responsive
     var options = {
         chart: {
-		renderTo: 'loadcsv',
-		type: 'column'
-	},
-	title: {
-		text: 'Accidents Sample in 2015'
-	},
-	xAxis: {
-		categories: []
-	},
-	yAxis: {
-		title: {
-		    text: '# of Accidents'
-		}
-	},
-	series: []
+        renderTo: container,
+        type: 'column'
+    },
+    title: {
+        text: 'Accidents Sample in 2015'
+    },
+    xAxis: {
+        categories: []
+    },
+    yAxis: {
+        title: {
+            text: '# of Accidents'
+        }
+    },
+    series: []
     };
-	//Only displays Apples to Bananas.
-	
-	/*
-		Load the data from the CSV file. This is the contents of the file:
-		Apples,Pears,Oranges,Bananas,Plums
-		John,8,4,6,5
-		Jane,3,4,2,3
-		Joe,86,76,79,77
-		Janet,3,16,13,15
-	 */ 
+    //Only displays Apples to Bananas.
+    
+    /*
+        Load the data from the CSV file. This is the contents of the file:
+        Apples,Pears,Oranges,Bananas,Plums
+        John,8,4,6,5
+        Jane,3,4,2,3
+        Joe,86,76,79,77
+        Janet,3,16,13,15
+     */ 
 
-	$.get('data/accident_drunk_hc.csv', function(data) {
-		// Split the lines
-		var lines = data.split('\n');
-		$.each(lines, function(lineNo, line) {
-			var items = line.split(',');
-			// header line containes categories
-			if (lineNo == 0) { //Apples,Pears,Oranges,Bananas,Plums : Weekdays for my data.
-				$.each(items, function(itemNo, item) {
-					if (itemNo > 0) options.xAxis.categories.push(item);
-				});
-			}
-			// the rest of the lines contain data with their name in the first position
-			else { //John,8,4,6,5 : Accident,5237,3991,3950,4128,4406,4857,5597
-				var series = { //load into series.
-	    			data: []
-				};
-				$.each(items, function(itemNo, item) {
-					if (itemNo == 0 && !(item == null)) { //first data is the name.
-						series.name = item;
-					} else {
-						series.data.push(parseFloat(item));
-					}
-				}); //Where is it getting the third Series?
-				options.series.push(series);
-			}
-		});
-		var chart = new Highcharts.Chart(options);
-	});
-	
-	//Comdination chart. Last chart I will do before I go into how to do dynamic data loading.
-	Highcharts.chart('combo', {
+    $.get('data/accident_drunk_hc.csv', function(data) {
+        // Split the lines
+        var lines = data.split('\n');
+        $.each(lines, function(lineNo, line) {
+            var items = line.split(',');
+            // header line containes categories
+            if (lineNo == 0) { //Apples,Pears,Oranges,Bananas,Plums : Weekdays for my data.
+                $.each(items, function(itemNo, item) {
+                    if (itemNo > 0) options.xAxis.categories.push(item);
+                });
+            }
+            // the rest of the lines contain data with their name in the first position
+            else { //John,8,4,6,5 : Accident,5237,3991,3950,4128,4406,4857,5597
+                var series = { //load into series.
+                    data: []
+                };
+                $.each(items, function(itemNo, item) {
+                    if (itemNo == 0 && !(item == null)) { //first data is the name.
+                        series.name = item;
+                    } else {
+                        series.data.push(parseFloat(item));
+                    }
+                }); //Where is it getting the third Series?
+                options.series.push(series);
+            }
+        });
+        var chart = new Highcharts.Chart(options);
+    });
+})}
+
+function combo() {$(document).ready(function () {
+//Comdination chart. Last chart I will do before I go into how to do dynamic data loading.
+    Highcharts.chart(container, {
         title: {
             text: 'Combination chart'
         },
@@ -315,9 +323,11 @@ $(document).ready(function () {
             }
         }]
     });
+})}
 
+function spline() {$(document).ready(function () {
     //Spline Highchart
-    Highcharts.chart('spline', {
+    Highcharts.chart(container, {
         chart: {
             type: 'spline'
         },
@@ -379,4 +389,4 @@ $(document).ready(function () {
             }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
         }]
     });
-})
+})}

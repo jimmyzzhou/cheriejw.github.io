@@ -1,0 +1,12 @@
+h1, h2, h3 {
+	font-family: arial, helvetica, sans-serif;
+}
+
+button {
+	font-family: arial, helvetica, sans-serif;
+}
+
+.dynamic {
+	display: inline-block; 
+	width: 100%;
+}
