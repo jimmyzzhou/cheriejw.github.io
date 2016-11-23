@@ -10,3 +10,22 @@ button {
 	display: inline-block; 
 	width: 100%;
 }
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  width: 162px;
+  padding: 10px 24px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
