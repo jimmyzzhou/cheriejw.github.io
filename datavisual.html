@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Data Visualization</title>
+  <meta name="description" content="Data Visualization">
+  <meta name="author" content="Cherie Woo">
+
+  <link rel="stylesheet" href="css/charts-style.css?v=1.0">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="js/highchart-demo.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body> 
+  <div align="center">
+    <h1> Data Visualization </h1>
+    <h4> Click on the buttons to see that graph! <br><a href="http://api.highcharts.com/highcharts/Highcharts"> Highcharts Documentation </a></h4>
+    <!-- <button type="button" onclick="alert('Click on the buttons to see that graph!')">How to use!</button> -->
+    <button class="button" type="button" onclick="spline()">Spline!</button>
+    <button class="button" type="button" onclick="combo()">Combo!</button>
+    <button class="button" type="button" onclick="bars()">Bars!</button>
+    <button class="button" type="button" onclick="bubble()">Bubble!</button>
+    <button class="button" type="button" onclick="loadcsv()">Load from CSV!</button>
+  </div>
+  <div id="dynamic" align="center"></div>
+  <!-- <div id="bars" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div> -->
+  <!-- <div id="bubble" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div> -->
+  <!-- <div id="loadcsv" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div> -->
+  <!-- <div id="combo" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div> -->
+  <!-- <div id="spline" align="center" style="display: inline-block; width: 100%; max-width: 660px"></div> -->
+</body>
+</html>
