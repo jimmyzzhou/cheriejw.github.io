@@ -1,0 +1,1 @@
+//All text box are teal and when you click on others turn grey.
