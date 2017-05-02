@@ -1,4 +1,4 @@
 # cheriejw.github.io
-Currently playing with *Data*. 
+Currently playing with *Continuous Intergration*. 
 
-  Kaggle Data Sets and Highcharts.
+  Travis CI.
