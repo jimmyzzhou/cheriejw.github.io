@@ -1,4 +1,4 @@
-#GitHub, Travis CI and SauceLabs
+# GitHub, Travis CI and SauceLabs
 
 ```java
 //TODO: Hook up Travis CI to a GitHub repository and have it work with SauceLabs. Might be cool to have it deploy to my droplet after passing.
