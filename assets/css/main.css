@@ -1705,7 +1705,7 @@
 		margin: 0 0 1.6875em 0;
 	}
 
-	header h2 + p {
+	h2 + p {
 		font-size: 1.25em;
 		margin-top: -0.5em;
 		line-height: 1.5em;
@@ -2469,7 +2469,7 @@
 		text-align: center;
 		top: 0;
 		width: 23em;
-		right: 0;
+		left: 0;
 	}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
