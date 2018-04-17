@@ -54,22 +54,7 @@
               document.getElementById("verb").innerHTML = '<p>' + verbs[Math.floor(Math.random() * verbs.length)] + '</p>';
             })();
           </script>
-					<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-</script>
 				</header>
 				<nav id="nav">
 					<ul>
@@ -100,10 +85,29 @@ for (i = 0; i < acc.length; i++) {
 								<div class = "container">
 									<p> These are some of my usability reviews of games. I've started writing these for practice and for the purpose of developing a more
 									    more critical mindset towards the games I play. I'm still new to these, so enough practice will eventually result in   
-									    better, incisive reviews. TEST.
+									    better, incisive reviews.
 									</p>
 									
 									<button class="accordion">Section 1</button>
 <div class="panel">
   <p>test</p>
 </div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+									</body>
+								</html>
+						
