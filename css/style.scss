@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+$font-stack: Montserrat, sans-serif;
+$primary-color: #333;
+$blue-gray: #37474f;
+$blue-gray-light: #546e7a;
+$blue-gray-lighter: #90a4ae;
+$gray: #8e8e8e;
+$zhou-blue: #86a6b3;
+$project-background: #cfd8dc;
+
+.fab, .fas {
+	color: $zhou-blue;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+}
+.fab:hover {
+	color: $blue-gray;
+}
+
+body {
+	font: 100% $font-stack;
+	color: $primary-color;
+}
+/*Helper Classes*/
+.pad-10 {
+	padding: 10px;
+}
+.pad-20 {
+	padding: 20px;
+}
+.pad-40 {
+	padding: 40px;
+}
+.pad-60 {
+	padding: 60px;
+}
+
+.main-card {
+	width: 100%;
+	background: #f1f1f1;
+	margin-top: 180px;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	transform-style: preserve-3d;
+	z-index: 999;
+	h1 {
+		margin-top: 20px;
+		color: $blue-gray;
+		letter-spacing: 3px;
+		 text-shadow: 1px 5px rgba(0, 0, 0, 0.15);
+	}
+	h3 {
+		color: $blue-gray-light;
+		font-size: 20px;
+		text-transform: capitalize;
+		letter-spacing: 1px;
+		margin: 10px 0px;
+		padding: 0;
+	}
+	h5 {
+		color: $gray;
+		font-size: 14px;
+		padding: 0;
+	}
+	p {
+		color: $gray;
+		width: 80%;
+		margin: 30px auto;
+	}
+}
+.section {
+	color: $gray;
+	margin: 40px;
+
+	h2 {
+		font-size: 26px;
+		color: $blue-gray-light;
+		letter-spacing: 2px;
+	}
+	h5 {
+		font-size: 16px;
+		color: $blue-gray-lighter;
+	}
+}
+.profile-pic {
+	border: 5px solid #f5f5f5;
+	border-radius: 100px;
+	background: url('../images/avatar.jpg');
+	background-size:contain;
+	margin: 0 auto;
+	margin-top: -120px;
+	width: 150px;
+	height: 150px;
+	transform: translateZ(20px);
+}
+.project {
+	margin-top: 20px;
+	border-radius: 15px;
+	padding: 10px 20px;
+
+	background: $project-background;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	h3 {
+		padding: 10px 0px;
+		margin: 0;
+	}
+}
+.project:hover {
+	background: #e3edf1;
+}
+.heart {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	padding: 10px;
+	border-radius: 40px;
+}
+.heart img {
+	border-radius: 40px;
+	padding: 1px;
+}
+.heart:hover {
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.tilt-lg {
+	transform: translateZ(50px);
+}
+.tilt-md {
+	transform: translateZ(30px);
+}
+.tilt-sm {
+	transform: translateZ(15px);
+}
+.tilt-xs {
+	transform: translateZ(10px);
+}
+ul li, ul li a {
+	color: $gray;
+	list-style: none;
+	text-decoration: none;
+	margin: 30px;
+}
+ul li a:hover {
+	color: $zhou-blue;
+	text-decoration: none;
+
+}
+.shadow-thin {
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+
+}
+.shadow-thick {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
