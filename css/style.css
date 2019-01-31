@@ -2,6 +2,12 @@
 .center-block {
   margin: 0 auto; }
 
+.unstyled-button {
+  border: none;
+  padding: 0;
+  background: none;
+}
+
 .fab, .fas {
   color: #86a6b3;
   margin-bottom: 10px;
