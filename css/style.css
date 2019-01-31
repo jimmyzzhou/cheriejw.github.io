@@ -8,7 +8,6 @@
   background: none;
   outline: none;
   width: 400px;
-  margin-left: 50px;
 }
 
 .unstyled-button2 {
@@ -17,7 +16,6 @@
   background: none;
   outline: none;
   width: 400px; 
-  margin-right: 50px;
 }
 
 .fab, .fas {
