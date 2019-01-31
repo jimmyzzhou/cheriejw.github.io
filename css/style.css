@@ -135,7 +135,7 @@ ul li, ul li a {
   color: #8e8e8e;
   list-style: none;
   text-decoration: none;
-  margin: 30px; }
+  margin-bottom: 30px; }
 
 ul li a:hover {
   color: #86a6b3;
