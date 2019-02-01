@@ -18,6 +18,10 @@
   width: 522px; 
 }
 
+.modal-lg {
+  max-width: 80%;
+}
+
 .fab, .fas {
   color: #86a6b3;
   margin-bottom: 10px;
