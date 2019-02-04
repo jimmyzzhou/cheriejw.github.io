@@ -18,6 +18,8 @@
   width: 522px; 
 }
 
+button:focus {outline:0;}
+
 .modal-lg {
   max-width: 75% !important;
 }
